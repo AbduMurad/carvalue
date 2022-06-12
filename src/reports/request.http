@@ -1,0 +1,27 @@
+### Create a new report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "make": "hundai",
+  "model": "avanti",
+  "year": 1982,
+  "mileage": 50000,
+  "lng": 45,
+  "lat": 45,
+  "price": 20000
+}
+
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/6
+Content-Type: application/json
+
+{
+  "approved" : true
+}
+
+
+
+### Get an estimate for an existing vehilce
+GET http://localhost:3000/reports?make=hundai&model=avanti&lng=45&lat=45&mileage=20000&year=1981
